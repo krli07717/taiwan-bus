@@ -1,8 +1,18 @@
 import "./Logo.css";
 import { Link } from "react-router-dom";
 import logoSvg from "../assets/logo.svg";
+import logoZhSvg from "../assets/logo-zh.svg";
 
-export default function Logo() {
+export function LogoZh() {
+  return (
+    <h1 className="logo">
+      <Link to="/">
+        <img src={logoZhSvg} alt="Taiwan Bus Logo" />
+      </Link>
+    </h1>
+  );
+}
+export function Logo() {
   return (
     <h1 className="logo">
       <Link to="/">

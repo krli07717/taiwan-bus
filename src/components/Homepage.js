@@ -2,7 +2,7 @@ import "./Homepage.css";
 import { Link } from "react-router-dom";
 import locationSvg from "../assets/icon-location.svg";
 import searchSvg from "../assets/icon-search.svg";
-import Logo from "./Logo";
+import { Logo } from "./Logo";
 
 function Nav() {
   return (

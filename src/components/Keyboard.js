@@ -7,6 +7,7 @@ function CityKey({ city_zh, city_en, handleChooseCity }) {
         type="radio"
         name="city"
         id={city_en}
+        data-city_zh={city_zh}
         onChange={handleChooseCity}
         hidden
       />

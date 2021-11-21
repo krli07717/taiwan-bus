@@ -1,3 +1,10 @@
+.App {
+  height: 100vh;
+  background: url("./assets/homepage-background.png") 30% center / cover
+    no-repeat #131414;
+  mix-blend-mode: lighten;
+}
+
 .button_heavy {
   padding: 6px;
   border-radius: 6px;

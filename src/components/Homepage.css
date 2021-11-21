@@ -1,0 +1,81 @@
+.homepage {
+  height: 100vh;
+  background: url("../assets/homepage-background.png") 30% center / cover
+    no-repeat #131414;
+  mix-blend-mode: lighten;
+  position: relative;
+}
+
+.homepage .logo {
+  position: absolute;
+  top: 102px;
+  left: 54px;
+  filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+  font-size: 0;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.logo a[href="/nearby-bus"] {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  top: 165px;
+  left: 107px;
+  background: url("../assets/hompage-blue-dots.svg") no-repeat,
+    url("../assets/homepage-circle.svg") 9% 78% no-repeat,
+    url("../assets/homepage-circle.svg") 75% 99% no-repeat;
+  width: 240px;
+  height: 340px;
+}
+
+nav a {
+  display: inline-block;
+  width: 140px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+nav a[href="/nearby-bus"] {
+  position: absolute;
+  top: 20px;
+  left: 92px;
+}
+
+nav a[href="/search-bus"] {
+  position: absolute;
+  top: 190px;
+  left: 67px;
+}
+
+nav a[href="/search-train"] {
+  position: absolute;
+  top: 309px;
+  left: -37px;
+}
+
+footer {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f5f5f5;
+  width: fit-content;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer a {
+  color: #f5f5f5;
+  text-decoration: underline;
+}

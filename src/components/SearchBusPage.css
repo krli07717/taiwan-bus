@@ -25,6 +25,7 @@
   border-radius: 6px;
   font-size: 16px;
   line-height: 23px;
+  color: #1cc8ee;
 }
 
 .search_bus_page .city_keyboard {
@@ -38,4 +39,55 @@
   to {
     opacity: 1;
   }
+}
+
+.routes {
+  margin: 0 16px;
+  padding: 24px 0;
+}
+
+.routes_city {
+  color: #f5f5f5;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.routes_list {
+  margin-top: 6px;
+}
+
+.routes_list .route {
+  display: block;
+  padding: 12px 16px;
+  color: #f5f5f5;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+
+.routes_list .route:nth-child(odd) {
+  background-color: #1c1d1d;
+}
+
+.routes_list .route_name {
+  display: block;
+  color: #1cc8ee;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.route_fromTo {
+  margin: 0;
+}
+
+.route_fromTo span {
+  color: #1cc8ee;
+}
+
+.routes_list .no_routes {
+  font-size: 17px;
+  color: #f5f5f5;
+  display: block;
+  text-align: center;
 }

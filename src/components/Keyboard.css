@@ -1,0 +1,26 @@
+.city_keyboard {
+  background-color: #1c1d1d;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 24px 21px;
+}
+
+.city_keyboard span {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.city_keyboard input:checked + span {
+  color: #131414;
+  background-color: #1cc8ee;
+}
+
+.city_keyboard label[for="set_city"] {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}

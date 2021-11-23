@@ -17,8 +17,9 @@ function SearchInput({ value, onChange, disabled }) {
   );
 }
 
-function RouteItem({ routeInfo }) {
-  const { DepartureStopNameZh, DestinationStopNameZh, RouteName } = routeInfo;
+function RouteItem({ routeInfo, city }) {
+  const { RouteUID, DepartureStopNameZh, DestinationStopNameZh, RouteName } =
+    routeInfo;
   const fromTo =
     DepartureStopNameZh && DestinationStopNameZh ? (
       <p className="route_fromTo">
@@ -27,8 +28,9 @@ function RouteItem({ routeInfo }) {
         {DestinationStopNameZh}
       </p>
     ) : null;
+  // router onsubmit?
   return (
-    <Link to="/" className="route">
+    <Link to={`${city[0]}/${RouteUID}`} className="route">
       <span className="route_name">{RouteName}</span>
       {fromTo}
     </Link>
@@ -37,7 +39,7 @@ function RouteItem({ routeInfo }) {
 
 function RouteList({ city, routes }) {
   const routesList = routes.map((routeInfo) => (
-    <RouteItem routeInfo={routeInfo} key={routeInfo.RouteUID} />
+    <RouteItem routeInfo={routeInfo} key={routeInfo.RouteUID} city={city} />
   ));
   const noRoutes = <span className="no_routes">沒有符合路線</span>;
   return (

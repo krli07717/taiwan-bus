@@ -1,5 +1,6 @@
 import Homepage from "./components/Homepage";
 import SearchBusPage from "./components/SearchBusPage";
+import BusStatusPage from "./components/BusStatusPage";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/nearby-bus" element={<Homepage />} />
         <Route path="/search-bus" element={<SearchBusPage />} />
+        <Route path="/search-bus/:city/:RouteUID" element={<BusStatusPage />} />
       </Routes>
     </div>
   );

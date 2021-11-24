@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { LogoZh } from "./Logo";
+import { LogoZh } from "../components/Logo";
 import { Link } from "react-router-dom";
 import "./NearbyBusPage.css";
 import fetchTdxApi from "../utils/fetchTdxApi";

@@ -1,8 +1,8 @@
-import Homepage from "./components/Homepage";
-import SearchBusPage from "./components/SearchBusPage";
-import BusStatusPage from "./components/BusStatusPage";
-import NearbyBusPage from "./components/NearbyBusPage";
-import RoutesByStationPage from "./components/RoutesByStationPage";
+import Homepage from "./pages/Homepage";
+import SearchBusPage from "./pages/SearchBusPage";
+import BusStatusPage from "./pages/BusStatusPage";
+import NearbyBusPage from "./pages/NearbyBusPage";
+import RoutesByStationPage from "./pages/RoutesByStationPage";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { useState } from "react";

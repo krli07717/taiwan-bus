@@ -2,8 +2,8 @@ import "./BusStatusPage.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import fetchTdxApi from "../utils/fetchTdxApi";
-import { LogoZh } from "./Logo";
-import BackButton from "./BackButton";
+import { LogoZh } from "../components/Logo";
+import BackButton from "../components/BackButton";
 
 function Stop({ stopInfo }) {
   const { stopName, plateNumb, estimatedSeconds, stopStatus } = stopInfo;

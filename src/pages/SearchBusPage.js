@@ -1,8 +1,8 @@
 import "./SearchBusPage.css";
-import { LogoZh } from "./Logo";
+import { LogoZh } from "../components/Logo";
 import { useState, useEffect, useRef } from "react";
-import { CityKeyboard } from "./Keyboard";
-import RouteList from "./RouteList";
+import { CityKeyboard } from "../components/Keyboard";
+import RouteList from "../components/RouteList";
 import fetchTdxApi from "../utils/fetchTdxApi";
 
 function SearchInput({ value, onChange, disabled }) {

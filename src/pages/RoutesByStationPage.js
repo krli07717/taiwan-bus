@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { LogoZh } from "./Logo";
-import BackButton from "./BackButton";
+import { LogoZh } from "../components/Logo";
+import BackButton from "../components/BackButton";
 import fetchTdxApi from "../utils/fetchTdxApi";
 
 function PossibleRouteItem({ possibleRouteInfo }) {

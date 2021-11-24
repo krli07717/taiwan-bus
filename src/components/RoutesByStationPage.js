@@ -29,9 +29,7 @@ function PossibleRouteList({ possibleRoutes }) {
   const noStations = <span className="no_routes">沒有符合路線</span>;
   return (
     <div className="routes">
-      <div className="routes_list">
-        {routesList.length ? routesList : noStations}
-      </div>
+      <div className="routes_list">{routesList.length ? routesList : null}</div>
     </div>
   );
 }

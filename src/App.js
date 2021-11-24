@@ -23,8 +23,6 @@ function App() {
             />
           }
         />
-        <Route path="/search-bus" element={<SearchBusPage />} />
-        <Route path="/search-bus/:city/:RouteUID" element={<BusStatusPage />} />
         <Route
           path="/nearby-bus/:StationName"
           element={<RoutesByStationPage />}
@@ -33,6 +31,8 @@ function App() {
           path="/nearby-bus/:station/:city/:RouteUID"
           element={<BusStatusPage />}
         />
+        <Route path="/search-bus" element={<SearchBusPage />} />
+        <Route path="/search-bus/:city/:RouteUID" element={<BusStatusPage />} />
       </Routes>
     </div>
   );

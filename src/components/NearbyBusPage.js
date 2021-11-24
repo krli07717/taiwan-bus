@@ -35,14 +35,14 @@ function NearbyStationList({ nearbyStations, userLocation }) {
   return (
     <div className="routes">
       <div className="routes_list">
-        {stationList.length ? stationList : noStations}
+        {stationList.length ? stationList : null}
       </div>
     </div>
   );
 }
 
 export default function NearbyBusPage() {
-  const [userLocation, setUserLocation] = useState([25.03746, 121.564558]); //Taipei
+  const [userLocation, setUserLocation] = useState([]); //Taipei
   const [nearbyStations, setNearbyStations] = useState([]);
 
   useEffect(() => {
@@ -97,7 +97,7 @@ export default function NearbyBusPage() {
         throw error;
       }
     }
-    getNearbyStations();
+    if (userLocation.length) getNearbyStations();
   }, [userLocation]);
 
   return (
@@ -106,11 +106,16 @@ export default function NearbyBusPage() {
         <LogoZh />
         <span className="nearby">我的附近</span>
       </div>
-      <NearbyStationList
-        // city={city}
-        nearbyStations={nearbyStations}
-        userLocation={userLocation}
-      />
+      {userLocation.length ? (
+        <NearbyStationList
+          nearbyStations={nearbyStations}
+          userLocation={userLocation}
+        />
+      ) : (
+        <div className="routes">
+          <p className="no_routes">定位中...</p>
+        </div>
+      )}
     </div>
   );
 }

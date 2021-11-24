@@ -31,7 +31,7 @@ function NearbyStationList({ nearbyStations, userLocation }) {
       key={nearbyStationInfo.nearbyStationName}
     />
   ));
-  const noStations = <span className="no_routes">沒有符合路線</span>;
+  //   const noStations = <span className="no_routes">沒有符合路線</span>;
   return (
     <div className="routes">
       <div className="routes_list">
@@ -41,8 +41,8 @@ function NearbyStationList({ nearbyStations, userLocation }) {
   );
 }
 
-export default function NearbyBusPage() {
-  const [userLocation, setUserLocation] = useState([]); //Taipei
+export default function NearbyBusPage({ userLocation, setUserLocation }) {
+  //   const [userLocation, setUserLocation] = useState([]);
   const [nearbyStations, setNearbyStations] = useState([]);
 
   useEffect(() => {
@@ -50,14 +50,14 @@ export default function NearbyBusPage() {
     async function getUserLocation() {
       try {
         // get location
-        // const [lat, lng] = [25.03746, 121.564558];
+        // const [lat, lng] = [25.03746, 121.564558]; //Taipei
         const [lat, lng] = await asyncGetGeolocation();
         if (!unmounted) setUserLocation([lat, lng]);
       } catch (error) {
         throw error;
       }
     }
-    getUserLocation();
+    if (!userLocation.length) getUserLocation();
     return () => (unmounted = true);
   }, []);
 

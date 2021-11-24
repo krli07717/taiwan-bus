@@ -1,8 +1,8 @@
 import "./SearchBusPage.css";
 import { LogoZh } from "./Logo";
-import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { CityKeyboard } from "./Keyboard";
+import RouteList from "./RouteList";
 import fetchTdxApi from "../utils/fetchTdxApi";
 
 function SearchInput({ value, onChange, disabled }) {
@@ -14,41 +14,6 @@ function SearchInput({ value, onChange, disabled }) {
       onChange={onChange}
       disabled={disabled}
     />
-  );
-}
-
-function RouteItem({ routeInfo, city }) {
-  const { RouteUID, DepartureStopNameZh, DestinationStopNameZh, RouteName } =
-    routeInfo;
-  const fromTo =
-    DepartureStopNameZh && DestinationStopNameZh ? (
-      <p className="route_fromTo">
-        {DepartureStopNameZh}
-        <span>&nbsp;&nbsp;往&nbsp;&nbsp;</span>
-        {DestinationStopNameZh}
-      </p>
-    ) : null;
-  // router onsubmit?
-  return (
-    <Link to={`${city[0]}/${RouteUID}`} className="route">
-      <span className="route_name">{RouteName}</span>
-      {fromTo}
-    </Link>
-  );
-}
-
-function RouteList({ city, routes }) {
-  const routesList = routes.map((routeInfo) => (
-    <RouteItem routeInfo={routeInfo} key={routeInfo.RouteUID} city={city} />
-  ));
-  const noRoutes = <span className="no_routes">沒有符合路線</span>;
-  return (
-    <div className="routes">
-      <h2 className="routes_city">{city[1]}</h2>
-      <div className="routes_list">
-        {routesList.length ? routesList : noRoutes}
-      </div>
-    </div>
   );
 }
 

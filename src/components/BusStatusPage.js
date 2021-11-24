@@ -46,6 +46,7 @@ function Stop({ stopInfo }) {
 }
 
 function StopStatus({ stopStatus }) {
+  console.log(stopStatus);
   return stopStatus.map((stopInfo) => (
     <Stop key={stopInfo.stopUID} stopInfo={stopInfo} />
   ));
@@ -96,7 +97,14 @@ export default function BusStatusPage() {
                 plateNumb: PlateNumb,
                 estimatedSeconds: EstimateTime,
               };
-            });
+            })
+            .filter(
+              (stop, index, originalArray) =>
+                index ===
+                originalArray.findIndex(
+                  (stopDuplicate) => stop.stopUID === stopDuplicate.stopUID
+                )
+            );
         }
 
         const stopsDirectionToStatus = getStopsStatus(0) ?? []; //沒有去程

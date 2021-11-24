@@ -5,6 +5,22 @@
   overflow: auto;
 }
 
+.routes::-webkit-scrollbar {
+  width: 5px;
+  background: #414242;
+  border-radius: 20px;
+}
+.routes::-webkit-scrollbar-thumb {
+  background: #1cc8ee;
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .routes {
+    max-height: calc(100vh - 92px);
+  }
+}
+
 .routes_city {
   color: #f5f5f5;
   font-size: 16px;

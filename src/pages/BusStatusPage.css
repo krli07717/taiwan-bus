@@ -3,6 +3,12 @@
   background-color: #1c1d1d;
 }
 
+@media (min-width: 900px) {
+  .bus_status_page {
+    padding: 0 calc((100vw - 900px) / 2);
+  }
+}
+
 .bus_status_page .top_nav {
   display: flex;
   align-items: center;
@@ -15,6 +21,13 @@
   height: 40px;
   margin: 0 50% 0 auto;
   transform: translateX(50%);
+}
+
+@media (min-width: 768px) {
+  .bus_status_page .top_nav .logo {
+    width: 132px;
+    height: 55px;
+  }
 }
 
 .bus_status_page .back_page {
@@ -62,6 +75,13 @@
   bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .choose_direction input:checked + span:not(.no_route)::after {
+    width: 70%;
+    left: 15%;
+  }
+}
+
 .choose_direction .direction span {
   color: #1cc8ee;
 }
@@ -83,6 +103,12 @@
   margin-top: 9px;
   max-height: calc(100vh - 205px);
   overflow: auto;
+}
+
+@media (min-width: 768px) {
+  .stops {
+    max-height: calc(100vh - 220px);
+  }
 }
 
 .stops::-webkit-scrollbar {

@@ -14,7 +14,8 @@
   .homepage .logo {
     width: 293px;
     height: 122px;
-    top: 252px;
+    /* top: 252px; */
+    top: 20vh;
     left: 24vw;
   }
 }
@@ -78,7 +79,8 @@ nav a[href="/search-train"] {
       url("../assets/homepage-circle.svg") -1% 16% no-repeat,
       url("../assets/homepage-circle.svg") 23% 77% no-repeat,
       url("../assets/homepage-circle.svg") 90% 95% no-repeat;
-    top: 330px;
+    /* top: 330px; */
+    top: 29vh;
     left: 34vw;
   }
 

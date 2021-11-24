@@ -12,7 +12,6 @@ export function RouteItem({ routeInfo, city }) {
         {DestinationStopNameZh}
       </p>
     ) : null;
-  // router onsubmit?
   return (
     <Link to={`${city[0]}/${RouteUID}`} className="route">
       <span className="route_name">{RouteName}</span>

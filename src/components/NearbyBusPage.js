@@ -25,13 +25,11 @@ function NearbyStationItem({ nearbyStationInfo, userLocation }) {
 function NearbyStationList({ nearbyStations, userLocation }) {
   const stationList = nearbyStations.map((nearbyStationInfo) => (
     <NearbyStationItem
-      //   city={city}
       nearbyStationInfo={nearbyStationInfo}
       userLocation={userLocation}
       key={nearbyStationInfo.nearbyStationName}
     />
   ));
-  //   const noStations = <span className="no_routes">沒有符合路線</span>;
   return (
     <div className="routes">
       <div className="routes_list">
@@ -42,15 +40,12 @@ function NearbyStationList({ nearbyStations, userLocation }) {
 }
 
 export default function NearbyBusPage({ userLocation, setUserLocation }) {
-  //   const [userLocation, setUserLocation] = useState([]);
   const [nearbyStations, setNearbyStations] = useState([]);
 
   useEffect(() => {
     let unmounted = false;
     async function getUserLocation() {
       try {
-        // get location
-        // const [lat, lng] = [25.03746, 121.564558]; //Taipei
         const [lat, lng] = await asyncGetGeolocation();
         if (!unmounted) setUserLocation([lat, lng]);
       } catch (error) {
@@ -64,12 +59,8 @@ export default function NearbyBusPage({ userLocation, setUserLocation }) {
   useEffect(() => {
     async function getNearbyStations() {
       try {
-        // 查nearby stationUID
-        // 列出每個stationName、station stops中的RouteName
         const nearbyStationUrl = `https://ptx.transportdata.tw/MOTC/v2/Bus/Station/NearBy?$spatialFilter=nearby(${userLocation[0]},${userLocation[1]},500)&$format=JSON`;
         const nearbyStationRaw = await fetchTdxApi(nearbyStationUrl);
-        console.log(nearbyStationRaw);
-
         const nearbyStations = nearbyStationRaw
           .map((station) => {
             const possibleRoutes = station.Stops.map((stop) => {

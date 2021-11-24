@@ -49,6 +49,9 @@ nav a[href="/search-train"] {
   position: absolute;
   top: 309px;
   left: -37px;
+  color: #414242;
+  pointer-events: none;
+  cursor: default;
 }
 
 footer {

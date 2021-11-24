@@ -33,6 +33,7 @@ function App() {
         />
         <Route path="/search-bus" element={<SearchBusPage />} />
         <Route path="/search-bus/:city/:RouteUID" element={<BusStatusPage />} />
+        <Route path="/search-train" element={<Homepage />} />
       </Routes>
     </div>
   );

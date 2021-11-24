@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import fetchTdxApi from "../utils/fetchTdxApi";
 import { LogoZh } from "./Logo";
-import backSvg from "../assets/icon-back.svg";
+import BackButton from "./BackButton";
 
 function Stop({ stopInfo }) {
   const { stopName, plateNumb, estimatedSeconds, stopStatus } = stopInfo;
@@ -46,7 +46,6 @@ function Stop({ stopInfo }) {
 }
 
 function StopStatus({ stopStatus }) {
-  console.log(stopStatus);
   return stopStatus.map((stopInfo) => (
     <Stop key={stopInfo.stopUID} stopInfo={stopInfo} />
   ));
@@ -77,9 +76,6 @@ export default function BusStatusPage() {
             fetchTdxApi(estimatedTimeUrl),
           ]);
 
-        console.log("stops\n", stops);
-        console.log("estimatedTimes\n", estimatedTimes);
-
         function getStopsStatus(direction) {
           return stops
             .find(({ Direction }) => Direction === direction)
@@ -92,7 +88,6 @@ export default function BusStatusPage() {
               return {
                 stopUID: stop.StopUID,
                 stopName: stop.StopName.Zh_tw,
-                // stopPosition: stop.StopPosition,
                 stopStatus: StopStatus,
                 plateNumb: PlateNumb,
                 estimatedSeconds: EstimateTime,
@@ -121,7 +116,6 @@ export default function BusStatusPage() {
     fetchArrivalTime();
 
     const countDownInterval = setInterval(() => {
-      console.log("countdown running");
       setLastFetchSeconds((second) => ++second);
     }, 1000);
 
@@ -130,18 +124,6 @@ export default function BusStatusPage() {
       clearInterval(countDownInterval);
     };
   }, []);
-
-  useEffect(() => {
-    console.log("to\n", stopsToStatus);
-  }, [stopsToStatus]);
-
-  useEffect(() => {
-    console.log("from\n", stopsFromStatus);
-  }, [stopsFromStatus]);
-
-  useEffect(() => {
-    console.log(showFromStatus);
-  }, [showFromStatus]);
 
   const toDestinationName = stopsToStatus.length ? (
     <span className="direction">
@@ -160,19 +142,10 @@ export default function BusStatusPage() {
     <span className="direction no_route">沒有返程</span>
   );
 
-  // document.visibilityState
-
   return (
     <div className="bus_status_page">
       <div className="top_nav">
-        <img
-          src={backSvg}
-          alt="back icon"
-          className="back_page"
-          onClick={() => {
-            window.history.go(-1);
-          }}
-        />
+        <BackButton />
         <LogoZh />
       </div>
       <div className="choose_direction">

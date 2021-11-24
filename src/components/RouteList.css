@@ -1,7 +1,7 @@
 .routes {
   padding: 24px 16px;
   background-color: #131414;
-  max-height: calc(100vh - 77 px);
+  max-height: calc(100vh - 77px);
   overflow: auto;
 }
 

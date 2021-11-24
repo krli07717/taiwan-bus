@@ -46,17 +46,19 @@ export default function NearbyBusPage() {
   const [nearbyStations, setNearbyStations] = useState([]);
 
   useEffect(() => {
+    let unmounted = false;
     async function getUserLocation() {
       try {
         // get location
         // const [lat, lng] = [25.03746, 121.564558];
         const [lat, lng] = await asyncGetGeolocation();
-        setUserLocation([lat, lng]);
+        if (!unmounted) setUserLocation([lat, lng]);
       } catch (error) {
         throw error;
       }
     }
     getUserLocation();
+    return () => (unmounted = true);
   }, []);
 
   useEffect(() => {
@@ -97,10 +99,6 @@ export default function NearbyBusPage() {
     }
     getNearbyStations();
   }, [userLocation]);
-
-  useEffect(() => {
-    console.log(nearbyStations);
-  }, [nearbyStations]);
 
   return (
     <div className="nearby_bus_page">

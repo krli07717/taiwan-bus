@@ -6,15 +6,31 @@
 .homepage .logo {
   position: absolute;
   top: 102px;
-  left: 54px;
+  left: 13vw;
   filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+@media (min-width: 768px) {
+  .homepage .logo {
+    width: 293px;
+    height: 122px;
+    top: 252px;
+    left: 24vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homepage .logo {
+    top: 150px;
+    left: 55vw;
+  }
 }
 
 nav {
   position: absolute;
   top: 165px;
-  left: 107px;
-  background: url("../assets/hompage-blue-dots.svg") no-repeat,
+  left: 28vw;
+  background: url("../assets/homepage-blue-dots.svg") no-repeat,
     url("../assets/homepage-circle.svg") 9% 78% no-repeat,
     url("../assets/homepage-circle.svg") 75% 99% no-repeat;
   width: 240px;
@@ -54,6 +70,45 @@ nav a[href="/search-train"] {
   cursor: default;
 }
 
+@media (min-width: 768px) {
+  nav {
+    width: 300px;
+    height: 500px;
+    background: url("../assets/homepage-blue-dots-ipad.svg") 60% 50% no-repeat,
+      url("../assets/homepage-circle.svg") -1% 16% no-repeat,
+      url("../assets/homepage-circle.svg") 23% 77% no-repeat,
+      url("../assets/homepage-circle.svg") 90% 95% no-repeat;
+    top: 330px;
+    left: 34vw;
+  }
+
+  nav a {
+    width: 160px;
+  }
+
+  nav a[href="/nearby-bus"] {
+    top: 70px;
+    left: 212px;
+  }
+
+  nav a[href="/search-bus"] {
+    top: 295px;
+    left: 177px;
+  }
+
+  nav a[href="/search-train"] {
+    top: 439px;
+    left: -37px;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    top: 230px;
+    left: 66vw;
+  }
+}
+
 footer {
   font-family: Roboto;
   font-size: 12px;
@@ -69,4 +124,16 @@ footer {
 footer a {
   color: #f5f5f5;
   text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  footer {
+    left: 85%;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    left: 12%;
+  }
 }

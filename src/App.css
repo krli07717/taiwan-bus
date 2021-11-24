@@ -5,6 +5,20 @@
   mix-blend-mode: lighten;
 }
 
+@media (min-width: 768px) {
+  .App {
+    background: url("./assets/homepage-ipad.png") center center / cover
+      no-repeat #1f2121;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App {
+    background: url("./assets/homepage-desktop.png") center center / cover
+      no-repeat #1f2121;
+  }
+}
+
 .button_heavy {
   padding: 6px;
   border-radius: 6px;

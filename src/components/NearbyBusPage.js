@@ -44,7 +44,6 @@ function NearbyStationList({ nearbyStations, userLocation }) {
 export default function NearbyBusPage() {
   const [userLocation, setUserLocation] = useState([25.03746, 121.564558]); //Taipei
   const [nearbyStations, setNearbyStations] = useState([]);
-  const [city, setCity] = useState("");
 
   useEffect(() => {
     async function getUserLocation() {

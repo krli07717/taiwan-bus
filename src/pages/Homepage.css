@@ -51,19 +51,19 @@ nav a {
   gap: 4px;
 }
 
-nav a[href="/nearby-bus"] {
+nav a[href="/taiwan-bus/nearby-bus"] {
   position: absolute;
   top: 20px;
   left: 92px;
 }
 
-nav a[href="/search-bus"] {
+nav a[href="/taiwan-bus/search-bus"] {
   position: absolute;
   top: 190px;
   left: 67px;
 }
 
-nav a[href="/search-train"] {
+nav a[href="/taiwan-bus/search-train"] {
   position: absolute;
   top: 309px;
   left: -37px;
@@ -89,17 +89,17 @@ nav a[href="/search-train"] {
     width: 160px;
   }
 
-  nav a[href="/nearby-bus"] {
+  nav a[href="/taiwan-bus/nearby-bus"] {
     top: 70px;
     left: 212px;
   }
 
-  nav a[href="/search-bus"] {
+  nav a[href="/taiwan-bus/search-bus"] {
     top: 295px;
     left: 177px;
   }
 
-  nav a[href="/search-train"] {
+  nav a[href="/taiwan-bus/search-train"] {
     top: 439px;
     left: -37px;
   }

@@ -28,7 +28,7 @@ function App() {
           element={<RoutesByStationPage />}
         />
         <Route
-          path="/taiwan-bus/nearby-bus/:station/:city/:RouteUID"
+          path="/taiwan-bus/nearby-bus/:city/:RouteUID"
           element={<BusStatusPage />}
         />
         <Route path="/taiwan-bus/search-bus" element={<SearchBusPage />} />

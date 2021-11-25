@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/taiwan-bus/static/css/main.0df25e38.chunk.css",
-    "main.js": "/taiwan-bus/static/js/main.8ab245e3.chunk.js",
-    "main.js.map": "/taiwan-bus/static/js/main.8ab245e3.chunk.js.map",
+    "main.js": "/taiwan-bus/static/js/main.bb0b6236.chunk.js",
+    "main.js.map": "/taiwan-bus/static/js/main.bb0b6236.chunk.js.map",
     "runtime-main.js": "/taiwan-bus/static/js/runtime-main.f5411dd0.js",
     "runtime-main.js.map": "/taiwan-bus/static/js/runtime-main.f5411dd0.js.map",
     "static/js/2.854a2cad.chunk.js": "/taiwan-bus/static/js/2.854a2cad.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.f5411dd0.js",
     "static/js/2.854a2cad.chunk.js",
     "static/css/main.0df25e38.chunk.css",
-    "static/js/main.8ab245e3.chunk.js"
+    "static/js/main.bb0b6236.chunk.js"
   ]
 }

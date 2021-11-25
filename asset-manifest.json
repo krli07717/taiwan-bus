@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/taiwan-bus/static/css/main.e3f7ab32.chunk.css",
+    "main.css": "/taiwan-bus/static/css/main.885e3c58.chunk.css",
     "main.js": "/taiwan-bus/static/js/main.bb0b6236.chunk.js",
     "main.js.map": "/taiwan-bus/static/js/main.bb0b6236.chunk.js.map",
     "runtime-main.js": "/taiwan-bus/static/js/runtime-main.f5411dd0.js",
@@ -8,7 +8,7 @@
     "static/js/2.854a2cad.chunk.js": "/taiwan-bus/static/js/2.854a2cad.chunk.js",
     "static/js/2.854a2cad.chunk.js.map": "/taiwan-bus/static/js/2.854a2cad.chunk.js.map",
     "index.html": "/taiwan-bus/index.html",
-    "static/css/main.e3f7ab32.chunk.css.map": "/taiwan-bus/static/css/main.e3f7ab32.chunk.css.map",
+    "static/css/main.885e3c58.chunk.css.map": "/taiwan-bus/static/css/main.885e3c58.chunk.css.map",
     "static/js/2.854a2cad.chunk.js.LICENSE.txt": "/taiwan-bus/static/js/2.854a2cad.chunk.js.LICENSE.txt",
     "static/media/App.css": "/taiwan-bus/static/media/homepage-ipad.3e687744.png",
     "static/media/Homepage.css": "/taiwan-bus/static/media/homepage-circle.871d5ddf.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.f5411dd0.js",
     "static/js/2.854a2cad.chunk.js",
-    "static/css/main.e3f7ab32.chunk.css",
+    "static/css/main.885e3c58.chunk.css",
     "static/js/main.bb0b6236.chunk.js"
   ]
 }

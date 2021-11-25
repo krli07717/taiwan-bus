@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: url("./assets/homepage-background.png") 30% center / cover
     no-repeat #131414;
-  mix-blend-mode: lighten;
+  /* mix-blend-mode: lighten; */
 }
 
 @media (min-width: 768px) {

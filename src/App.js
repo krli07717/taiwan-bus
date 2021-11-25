@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/taiwan-bus" element={<Homepage />} />
         <Route
-          path="/nearby-bus"
+          path="/taiwan-bus/nearby-bus"
           element={
             <NearbyBusPage
               userLocation={userLocation}
@@ -24,16 +24,19 @@ function App() {
           }
         />
         <Route
-          path="/nearby-bus/:StationName"
+          path="/taiwan-bus/nearby-bus/:StationName"
           element={<RoutesByStationPage />}
         />
         <Route
-          path="/nearby-bus/:station/:city/:RouteUID"
+          path="/taiwan-bus/nearby-bus/:station/:city/:RouteUID"
           element={<BusStatusPage />}
         />
-        <Route path="/search-bus" element={<SearchBusPage />} />
-        <Route path="/search-bus/:city/:RouteUID" element={<BusStatusPage />} />
-        <Route path="/search-train" element={<Homepage />} />
+        <Route path="/taiwan-bus/search-bus" element={<SearchBusPage />} />
+        <Route
+          path="/taiwan-bus/search-bus/:city/:RouteUID"
+          element={<BusStatusPage />}
+        />
+        <Route path="/taiwan-bus/search-train" element={<Homepage />} />
       </Routes>
     </div>
   );

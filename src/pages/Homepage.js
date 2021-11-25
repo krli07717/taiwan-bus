@@ -26,7 +26,15 @@ function Nav() {
 function Footer() {
   return (
     <footer>
-      Taiwan Bus &copy; <a href="/">Code</a> / Design: KT
+      Taiwan Bus &copy;{" "}
+      <a
+        href="https://github.com/krli07717/taiwan-bus"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Code
+      </a>{" "}
+      / Design: KT
     </footer>
   );
 }

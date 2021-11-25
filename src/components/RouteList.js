@@ -13,7 +13,7 @@ export function RouteItem({ routeInfo, city }) {
       </p>
     ) : null;
   return (
-    <Link to={`${city[0]}/${RouteUID}`} className="route">
+    <Link to={`/taiwan-bus/${city[0]}/${RouteUID}`} className="route">
       <span className="route_name">{RouteName}</span>
       {fromTo}
     </Link>

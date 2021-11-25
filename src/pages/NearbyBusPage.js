@@ -12,7 +12,7 @@ function NearbyStationItem({ nearbyStationInfo, userLocation }) {
     .join(", ");
   return (
     <Link
-      to={encodeURIComponent(nearbyStationName)}
+      to={`/taiwan-bus/${encodeURIComponent(nearbyStationName)}`}
       className="route"
       state={{ possibleRoutes, userLocation }}
     >

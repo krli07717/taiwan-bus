@@ -8,7 +8,7 @@ import fetchTdxApi from "../utils/fetchTdxApi";
 function PossibleRouteItem({ possibleRouteInfo }) {
   const { routeName, routeUID, destinationName, city } = possibleRouteInfo;
   return (
-    <Link to={`${city}/${routeUID}`} className="route">
+    <Link to={`/taiwan-bus/${city}/${routeUID}`} className="route">
       <span className="route_name">{routeName}</span>
       <span className="route_fromTo">
         <span>往&nbsp;</span>

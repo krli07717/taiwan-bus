@@ -6,7 +6,7 @@ import logoZhSvg from "../assets/logo-zh.svg";
 export function LogoZh() {
   return (
     <h1 className="logo">
-      <Link to="/">
+      <Link to="/taiwan-bus/">
         <img src={logoZhSvg} alt="Taiwan Bus Logo" />
       </Link>
     </h1>
@@ -15,7 +15,7 @@ export function LogoZh() {
 export function Logo() {
   return (
     <h1 className="logo">
-      <Link to="/">
+      <Link to="/taiwan-bus/">
         <img src={logoSvg} alt="Taiwan Bus Logo" />
       </Link>
     </h1>

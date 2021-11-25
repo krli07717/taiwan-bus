@@ -7,15 +7,15 @@ import { Logo } from "../components/Logo";
 function Nav() {
   return (
     <nav>
-      <Link to="/nearby-bus" className="button_heavy">
+      <Link to="/taiwan-bus/nearby-bus" className="button_heavy">
         <img src={locationSvg} alt="location icon" />
         附近公車站
       </Link>
-      <Link to="/search-bus" className="button_heavy">
+      <Link to="/taiwan-bus/search-bus" className="button_heavy">
         <img src={searchSvg} alt="search icon" />
         查詢公車
       </Link>
-      <Link to="/search-train" className="button_heavy">
+      <Link to="/taiwan-bus/search-train" className="button_heavy">
         <img src={searchSvg} alt="search icon" />
         查詢客運
       </Link>
